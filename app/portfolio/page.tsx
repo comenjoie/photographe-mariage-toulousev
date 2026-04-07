@@ -26,10 +26,10 @@ const albums: Album[] = [
   {
     slug: 'amelie-romain-ariege',
     title: 'Amélie & Romain',
-    location: 'Vallée de l'Ariège, Pyrénées',
+    location: "Vallée de l'Ariège, Pyrénées",
     year: 2024,
     coverSrc: 'https://images.unsplash.com/photo-1469371670807-013ccf25f16a?w=800&q=80&auto=format&fit=crop',
-    coverAlt: 'Mariage d'Amélie et Romain dans la vallée de l'Ariège',
+    coverAlt: "Mariage d'Amélie et Romain dans la vallée de l'Ariège",
     tag: 'Pyrénées',
   },
   {
