@@ -32,19 +32,19 @@ const galleryImages: GalleryImage[] = [
 
 const testimonials: Testimonial[] = [
   {
-    text: 'Yannick a su capturer des instants que nous n'aurions jamais pu voir autrement. Chaque photo raconte notre histoire avec une sensibilité et un regard artistique incomparables.',
+    text: "Yannick a su capturer des instants que nous n'aurions jamais pu voir autrement. Chaque photo raconte notre histoire avec une sensibilité et un regard artistique incomparables.",
     author: 'Sophie & Thomas',
     location: 'Mariage à Toulouse, Château de Villeneuve',
     rating: 5,
   },
   {
-    text: 'Une expérience hors du temps. Discret, à l'écoute, et doté d'un œil absolument exceptionnel. Nos photos de mariage dans les Pyrénées sont tout simplement magnifiques.',
+    text: "Une expérience hors du temps. Discret, à l'écoute, et doté d'un œil absolument exceptionnel. Nos photos de mariage dans les Pyrénées sont tout simplement magnifiques.",
     author: 'Amélie & Romain',
     location: 'Mariage en montagne, Ariège',
     rating: 5,
   },
   {
-    text: 'Nous cherchions quelqu'un qui sache capturer l'émotion sans la mettre en scène. Yannick a exactement ce regard rare. Nos photos sont intemporelles.',
+    text: "Nous cherchions quelqu'un qui sache capturer l'émotion sans la mettre en scène. Yannick a exactement ce regard rare. Nos photos sont intemporelles.",
     author: 'Marie & Julien',
     location: 'Mariage sur la Côte Basque',
     rating: 5,

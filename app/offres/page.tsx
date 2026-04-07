@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 const offers = [
   {
     name: 'Essentiel',
-    tagline: 'L'essentiel de votre journée',
+    tagline: "L'essentiel de votre journée",
     duration: 'Demi-journée (6 heures)',
     price: 'À partir de 2 500 €',
     features: [
@@ -46,7 +46,7 @@ const offers = [
   },
   {
     name: 'Prestige',
-    tagline: 'L'expérience ultime, sur mesure',
+    tagline: "L'expérience ultime, sur mesure",
     duration: 'Multi-jours sur mesure',
     price: 'Sur devis',
     features: [

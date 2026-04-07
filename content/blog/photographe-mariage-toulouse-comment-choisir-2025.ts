@@ -6,7 +6,7 @@ const post: BlogPost = {
   excerpt:
     'Tout ce que vous devez savoir pour choisir le bon photographe de mariage à Toulouse en 2025 : critères, questions à poser, tarifs et erreurs à éviter.',
   coverImage: 'https://images.unsplash.com/photo-1519741497674-611481863552?w=1400&q=85&auto=format&fit=crop', // TODO: remplacer par photo Yakastudio
-  coverAlt: 'Couple de mariés à Toulouse lors d'un reportage photo de mariage',
+  coverAlt: "Couple de mariés à Toulouse lors d'un reportage photo de mariage",
   publishedAt: '2025-03-15',
   updatedAt: '2025-03-15',
   author: {

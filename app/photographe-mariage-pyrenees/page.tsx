@@ -6,7 +6,7 @@ import { RevealText } from '@/components/ui/RevealText'
 export const metadata: Metadata = {
   title: 'Photographe Mariage Pyrénées — Nature & Luxe · Yakastudio',
   description:
-    'Mariages en montagne : châlets, lumière dorée et émotions vraies. Photographe mariage Pyrénées disponible toute l'année. Yakastudio.',
+    "Mariages en montagne : châlets, lumière dorée et émotions vraies. Photographe mariage Pyrénées disponible toute l'année. Yakastudio.",
   keywords: [
     'photographe mariage pyrénées',
     'photographe mariage montagne',

@@ -29,17 +29,17 @@ const faqItems = [
   {
     question: 'Combien coûte un photographe de mariage à Toulouse ?',
     answer:
-      'Le tarif d'un photographe de mariage à Toulouse varie généralement entre 1 500 € et 5 000 € pour une prestation complète. Chez Yakastudio, nos offres débutent à 2 500 € pour un reportage de demi-journée et incluent une galerie en haute résolution, une séance engagement offerte et un accompagnement personnalisé.',
+      "Le tarif d'un photographe de mariage à Toulouse varie généralement entre 1 500 € et 5 000 € pour une prestation complète. Chez Yakastudio, nos offres débutent à 2 500 € pour un reportage de demi-journée et incluent une galerie en haute résolution, une séance engagement offerte et un accompagnement personnalisé.",
   },
   {
-    question: 'Combien de temps à l'avance dois-je réserver mon photographe de mariage ?',
+    question: "Combien de temps à l'avance dois-je réserver mon photographe de mariage ?",
     answer:
-      'Nous recommandons de réserver votre photographe de mariage à Toulouse au minimum 12 à 18 mois avant la date du mariage. Les samedis de mai à septembre sont les dates les plus prisées et se réservent souvent plus d'un an à l'avance.',
+      "Nous recommandons de réserver votre photographe de mariage à Toulouse au minimum 12 à 18 mois avant la date du mariage. Les samedis de mai à septembre sont les dates les plus prisées et se réservent souvent plus d'un an à l'avance.",
   },
   {
     question: 'Yannick Blaser intervient-il en dehors de Toulouse ?',
     answer:
-      'Oui, Yakastudio est basé à Toulouse mais intervient dans toute l'Occitanie, les Pyrénées, la Côte Basque et partout en France. Les déplacements à l'international sont également possibles pour les mariages de destination.',
+      "Oui, Yakastudio est basé à Toulouse mais intervient dans toute l'Occitanie, les Pyrénées, la Côte Basque et partout en France. Les déplacements à l'international sont également possibles pour les mariages de destination.",
   },
   {
     question: 'Combien de photos recevrons-nous après le mariage ?',
@@ -49,7 +49,7 @@ const faqItems = [
   {
     question: 'Est-ce possible de faire une séance engagement avant le mariage ?',
     answer:
-      'Absolument. La séance engagement (save the date) est incluse dans nos offres principales. Elle permet de créer un lien de confiance avant le grand jour, de tester votre aisance devant l'objectif et de tester différents lieux à Toulouse ou dans les environs.',
+      "Absolument. La séance engagement (save the date) est incluse dans nos offres principales. Elle permet de créer un lien de confiance avant le grand jour, de tester votre aisance devant l'objectif et de tester différents lieux à Toulouse ou dans les environs.",
   },
 ]
 
@@ -292,7 +292,7 @@ export default function PageToulouse() {
               {
                 icon: '◈',
                 title: 'Esthétique lumineuse & intemporelle',
-                text: 'Une signature lumineuse et douce, des couleurs fidèles et chaudes qui s'admirent encore dans vingt ans. Pas de filtres à la mode, juste la vérité de l'instant.',
+                text: "Une signature lumineuse et douce, des couleurs fidèles et chaudes qui s'admirent encore dans vingt ans. Pas de filtres à la mode, juste la vérité de l'instant.",
               },
               {
                 icon: '◈',
@@ -406,10 +406,10 @@ export default function PageToulouse() {
 
           <div style={{ display: 'flex', flexDirection: 'column', gap: '0', maxWidth: '700px', margin: '0 auto' }}>
             {[
-              { step: '01', title: 'La première rencontre', text: 'Un appel ou une rencontre autour d'un café pour faire connaissance, comprendre votre vision et vérifier notre compatibilité. C'est gratuit et sans engagement.' },
+              { step: '01', title: 'La première rencontre', text: "Un appel ou une rencontre autour d'un café pour faire connaissance, comprendre votre vision et vérifier notre compatibilité. C'est gratuit et sans engagement." },
               { step: '02', title: 'La réservation', text: 'Un contrat clair, un acompte de 30 % et une date bloquée dans notre agenda. Votre mariage est sécurisé.' },
-              { step: '03', title: 'La séance engagement', text: 'Incluse dans nos offres principales, elle vous permet de vous familiariser avec l'objectif dans un cadre détendu à Toulouse ou aux environs.' },
-              { step: '04', title: 'Le grand jour', text: 'Yannick arrive en avance, reste discret et attentif. Il anticipe chaque moment et capture l'authenticité de votre journée.' },
+              { step: '03', title: 'La séance engagement', text: "Incluse dans nos offres principales, elle vous permet de vous familiariser avec l'objectif dans un cadre détendu à Toulouse ou aux environs." },
+              { step: '04', title: 'Le grand jour', text: "Yannick arrive en avance, reste discret et attentif. Il anticipe chaque moment et capture l'authenticité de votre journée." },
               { step: '05', title: 'La galerie', text: 'Sous 4 à 6 semaines, vous recevez votre galerie privée de 400 à 600 photos retouchées, disponibles en téléchargement haute résolution.' },
             ].map((item, i) => (
               <RevealText key={i} delay={i * 80}>

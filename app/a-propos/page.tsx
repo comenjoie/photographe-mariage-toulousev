@@ -106,20 +106,20 @@ export default function AProposPage() {
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '3rem' }}>
             {[
               {
-                title: 'L'invisible présence',
-                text: 'Le photographe idéal, c'est celui dont on oublie la présence. Yannick travaille en discrétion totale pour que vous et vos proches soyez pleinement dans l'instant.',
+                title: "L'invisible présence",
+                text: "Le photographe idéal, c'est celui dont on oublie la présence. Yannick travaille en discrétion totale pour que vous et vos proches soyez pleinement dans l'instant.",
               },
               {
                 title: 'La lumière naturelle',
-                text: 'Pas de flash sur le dancefloor. Yannick maîtrise la photographie en lumière naturelle et en lumière ambiante — une signature lumineuse chaude, jamais froide ni artificielle.',
+                text: "Pas de flash sur le dancefloor. Yannick maîtrise la photographie en lumière naturelle et en lumière ambiante — une signature lumineuse chaude, jamais froide ni artificielle.",
               },
               {
-                title: 'L'émotion avant l'esthétique',
-                text: 'Une larme, un éclat de rire, une main qui trembles. L'émotion prime toujours sur la composition parfaite. C'est ce qui rend une photo intemporelle.',
+                title: "L'émotion avant l'esthétique",
+                text: "Une larme, un éclat de rire, une main qui tremble. L'émotion prime toujours sur la composition parfaite. C'est ce qui rend une photo intemporelle.",
               },
               {
                 title: 'La cohérence du récit',
-                text: 'Un reportage de mariage, c'est une histoire complète, du matin des préparatifs au dernier slow. Chaque image est pensée dans sa cohérence narrative.',
+                text: "Un reportage de mariage, c'est une histoire complète, du matin des préparatifs au dernier slow. Chaque image est pensée dans sa cohérence narrative.",
               },
             ].map((item, i) => (
               <RevealText key={i} delay={i * 100}>
@@ -152,7 +152,7 @@ export default function AProposPage() {
         <div className="container-content">
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: '2rem', textAlign: 'center' }}>
             {[
-              { number: '+10', label: 'années d'expérience' },
+              { number: '+10', label: "années d'expérience" },
               { number: '+300', label: 'mariages photographiés' },
               { number: '3', label: 'territoires de prédilection' },
               { number: '100%', label: 'disponibilité & écoute' },

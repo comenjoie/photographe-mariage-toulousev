@@ -17,14 +17,14 @@ const albums: Record<string, {
     title: 'Sophie & Thomas',
     location: 'Château de Villeneuve, Toulouse',
     year: 2024,
-    description: 'Un mariage d'une élégance rare au Château de Villeneuve, aux portes de Toulouse. Lumière de fin d'après-midi sur la brique rose, émotion et authenticité à chaque instant.',
+    description: "Un mariage d'une élégance rare au Château de Villeneuve, aux portes de Toulouse. Lumière de fin d'après-midi sur la brique rose, émotion et authenticité à chaque instant.",
     images: [
-      { src: 'https://images.unsplash.com/photo-1519741497674-611481863552?w=1200&q=85&auto=format&fit=crop', alt: 'Les mariés Sophie et Thomas s'embrassent sous un arbre en fleurs', width: 1200, height: 1600 },
+      { src: 'https://images.unsplash.com/photo-1519741497674-611481863552?w=1200&q=85&auto=format&fit=crop', alt: "Les mariés Sophie et Thomas s'embrassent sous un arbre en fleurs", width: 1200, height: 1600 },
       { src: 'https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=1200&q=85&auto=format&fit=crop', alt: 'Cérémonie de mariage dans le parc du château au coucher du soleil', width: 1200, height: 800 },
       { src: 'https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=1200&q=85&auto=format&fit=crop', alt: 'Détails des alliances en or sur les pétales de rose', width: 1200, height: 1600 },
       { src: 'https://images.unsplash.com/photo-1554879932-23a5d0eb3c38?w=1200&q=85&auto=format&fit=crop', alt: 'Bouquet de la mariée en fleurs blanches et feuillages', width: 1200, height: 1600 },
       { src: 'https://images.unsplash.com/photo-1591604466107-ec97de577aff?w=1200&q=85&auto=format&fit=crop', alt: 'Regard complice et sourire entre Sophie et Thomas', width: 1200, height: 1600 },
-      { src: 'https://images.unsplash.com/photo-1464699908537-0954e50791ee?w=1200&q=85&auto=format&fit=crop', alt: 'Vue d'ensemble de la salle de réception du château', width: 1200, height: 800 },
+      { src: 'https://images.unsplash.com/photo-1464699908537-0954e50791ee?w=1200&q=85&auto=format&fit=crop', alt: "Vue d'ensemble de la salle de réception du château", width: 1200, height: 800 },
     ],
   },
 }
