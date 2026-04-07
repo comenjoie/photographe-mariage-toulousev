@@ -1,0 +1,429 @@
+@import "tailwindcss";
+
+/* ─── Custom Properties ───────────────────────────────────────────────────── */
+:root {
+  --color-cream: #F5F0E8;
+  --color-anthracite: #1C1C1E;
+  --color-gold: #B8966C;
+  --color-gold-light: #D4B896;
+  --color-gold-dark: #9A7A54;
+  --color-mist: #E8E4DC;
+  --color-white: #FEFEFE;
+  --color-anthracite-soft: #2C2C2E;
+
+  --font-serif: var(--font-cormorant), Georgia, serif;
+  --font-sans: var(--font-jost), system-ui, sans-serif;
+
+  --space-section: 120px;
+  --space-section-sm: 80px;
+
+  --transition-luxury: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --transition-luxury-out: cubic-bezier(0.215, 0.61, 0.355, 1);
+
+  --border-gold: 1px solid rgba(184, 150, 108, 0.3);
+  --shadow-card: 0 4px 40px rgba(28, 28, 30, 0.08);
+  --shadow-hover: 0 12px 60px rgba(28, 28, 30, 0.16);
+}
+
+/* ─── Reset & Base ────────────────────────────────────────────────────────── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 18px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background-color: var(--color-cream);
+  color: var(--color-anthracite);
+  font-family: var(--font-sans);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  cursor: none;
+}
+
+/* Hide default cursor everywhere on desktop */
+@media (pointer: fine) {
+  * {
+    cursor: none !important;
+  }
+}
+
+/* ─── Typography ──────────────────────────────────────────────────────────── */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+  font-weight: 300;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+}
+
+h1 { font-size: clamp(2.75rem, 7vw, 6.5rem); }
+h2 { font-size: clamp(2rem, 4.5vw, 3.75rem); }
+h3 { font-size: clamp(1.5rem, 3vw, 2.5rem); }
+h4 { font-size: clamp(1.25rem, 2vw, 1.75rem); }
+
+p { font-family: var(--font-sans); }
+
+strong {
+  font-weight: 500;
+  color: var(--color-anthracite);
+}
+
+/* ─── Links ───────────────────────────────────────────────────────────────── */
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 400ms var(--transition-luxury);
+}
+
+a:focus-visible {
+  outline: 2px solid var(--color-gold);
+  outline-offset: 4px;
+  border-radius: 2px;
+}
+
+/* ─── Scrollbar ───────────────────────────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-mist);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-gold);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-gold-dark);
+}
+
+/* ─── Selection ───────────────────────────────────────────────────────────── */
+::selection {
+  background-color: var(--color-gold);
+  color: var(--color-white);
+}
+
+/* ─── Noise Grain Effect ──────────────────────────────────────────────────── */
+.grain::after {
+  content: '';
+  position: fixed;
+  inset: -50%;
+  width: 200%;
+  height: 200%;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 128px 128px;
+  pointer-events: none;
+  z-index: 9999;
+  animation: grainShift 0.5s steps(1) infinite;
+  opacity: 0.035;
+}
+
+@keyframes grainShift {
+  0%, 100% { transform: translate(0, 0); }
+  10% { transform: translate(-1%, -1%); }
+  20% { transform: translate(1%, 1%); }
+  30% { transform: translate(-2%, 1%); }
+  40% { transform: translate(2%, -1%); }
+  50% { transform: translate(-1%, 2%); }
+  60% { transform: translate(1%, -2%); }
+  70% { transform: translate(2%, 2%); }
+  80% { transform: translate(-2%, -2%); }
+  90% { transform: translate(1%, 1%); }
+}
+
+/* ─── Section Utilities ───────────────────────────────────────────────────── */
+.section-padding {
+  padding-top: var(--space-section);
+  padding-bottom: var(--space-section);
+}
+
+@media (max-width: 768px) {
+  .section-padding {
+    padding-top: var(--space-section-sm);
+    padding-bottom: var(--space-section-sm);
+  }
+}
+
+.container-content {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: clamp(1.25rem, 5vw, 3rem);
+  padding-right: clamp(1.25rem, 5vw, 3rem);
+}
+
+.container-wide {
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: clamp(1.25rem, 4vw, 2.5rem);
+  padding-right: clamp(1.25rem, 4vw, 2.5rem);
+}
+
+/* ─── Gold Separator ──────────────────────────────────────────────────────── */
+.gold-separator {
+  display: block;
+  width: 60px;
+  height: 1px;
+  background-color: var(--color-gold);
+  margin: 0 auto;
+}
+
+.gold-separator--left {
+  margin-left: 0;
+}
+
+/* ─── Roman Numerals Hover ────────────────────────────────────────────────── */
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+}
+
+.gallery-item .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(28, 28, 30, 0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 600ms var(--transition-luxury);
+}
+
+.gallery-item:hover .overlay {
+  background: rgba(28, 28, 30, 0.45);
+}
+
+.gallery-item .overlay-numeral {
+  font-family: var(--font-serif);
+  font-size: 3rem;
+  font-weight: 300;
+  color: var(--color-gold-light);
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 400ms var(--transition-luxury), transform 400ms var(--transition-luxury);
+}
+
+.gallery-item:hover .overlay-numeral {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.gallery-item img {
+  transition: transform 800ms var(--transition-luxury);
+}
+
+.gallery-item:hover img {
+  transform: scale(1.04);
+}
+
+/* ─── Form Styles ─────────────────────────────────────────────────────────── */
+.form-input {
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(184, 150, 108, 0.3);
+  padding: 0.75rem 0;
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  color: var(--color-anthracite);
+  transition: border-color 400ms var(--transition-luxury);
+  outline: none;
+}
+
+.form-input::placeholder {
+  color: rgba(28, 28, 30, 0.4);
+}
+
+.form-input:focus {
+  border-bottom-color: var(--color-gold);
+}
+
+.form-input:focus-visible {
+  outline: none;
+  border-bottom-color: var(--color-gold);
+}
+
+/* ─── Button Styles ───────────────────────────────────────────────────────── */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 2.5rem;
+  background-color: var(--color-anthracite);
+  color: var(--color-cream);
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  border: 1px solid var(--color-anthracite);
+  transition: background-color 400ms var(--transition-luxury), color 400ms var(--transition-luxury), border-color 400ms var(--transition-luxury);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-gold);
+  border-color: var(--color-gold);
+  color: var(--color-white);
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 2.5rem;
+  background-color: transparent;
+  color: var(--color-anthracite);
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  border: 1px solid rgba(28, 28, 30, 0.3);
+  transition: border-color 400ms var(--transition-luxury), color 400ms var(--transition-luxury);
+}
+
+.btn-secondary:hover {
+  border-color: var(--color-gold);
+  color: var(--color-gold);
+}
+
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 2.5rem;
+  background-color: transparent;
+  color: var(--color-cream);
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  border: 1px solid rgba(245, 240, 232, 0.4);
+  transition: border-color 400ms var(--transition-luxury), background-color 400ms var(--transition-luxury);
+}
+
+.btn-ghost:hover {
+  border-color: var(--color-gold);
+  background-color: rgba(184, 150, 108, 0.1);
+}
+
+/* ─── Prose / Article Content ─────────────────────────────────────────────── */
+.prose-luxury {
+  max-width: 70ch;
+}
+
+.prose-luxury h2 {
+  font-size: clamp(1.75rem, 3vw, 2.75rem);
+  margin-top: 3rem;
+  margin-bottom: 1.25rem;
+  color: var(--color-anthracite);
+}
+
+.prose-luxury h3 {
+  font-size: clamp(1.25rem, 2vw, 1.875rem);
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--color-anthracite);
+}
+
+.prose-luxury p {
+  margin-bottom: 1.5rem;
+  color: rgba(28, 28, 30, 0.8);
+}
+
+.prose-luxury ul, .prose-luxury ol {
+  margin-bottom: 1.5rem;
+  padding-left: 1.5rem;
+}
+
+.prose-luxury li {
+  margin-bottom: 0.5rem;
+}
+
+.prose-luxury strong {
+  font-weight: 600;
+  color: var(--color-anthracite);
+}
+
+/* ─── Page Transition ─────────────────────────────────────────────────────── */
+.page-transition-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: var(--color-cream);
+  z-index: 9998;
+  pointer-events: none;
+}
+
+/* ─── Navigation ──────────────────────────────────────────────────────────── */
+.nav-link {
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: inherit;
+  position: relative;
+  padding-bottom: 2px;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: var(--color-gold);
+  transition: width 400ms var(--transition-luxury);
+}
+
+.nav-link:hover::after,
+.nav-link[aria-current="page"]::after {
+  width: 100%;
+}
+
+/* ─── Responsive Images ───────────────────────────────────────────────────── */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ─── Focus States ────────────────────────────────────────────────────────── */
+button:focus-visible,
+[role="button"]:focus-visible {
+  outline: 2px solid var(--color-gold);
+  outline-offset: 4px;
+}
+
+/* ─── Reduced Motion ──────────────────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .grain::after {
+    display: none;
+  }
+}
