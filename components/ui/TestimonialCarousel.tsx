@@ -38,13 +38,6 @@ export function TestimonialCarousel({ testimonials }: TestimonialCarouselProps) 
   const [current, setCurrent] = useState(0)
   const [isAnimating, setIsAnimating] = useState(false)
 
-  useEffect(() => {
-    const timer = setInterval(() => {
-      goTo((current + 1) % testimonials.length)
-    }, 6000)
-    return () => clearInterval(timer)
-  }, [current, testimonials.length])
-
   const goTo = (index: number) => {
     if (isAnimating || index === current) return
     setIsAnimating(true)
@@ -53,6 +46,14 @@ export function TestimonialCarousel({ testimonials }: TestimonialCarouselProps) 
       setIsAnimating(false)
     }, 300)
   }
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      goTo((current + 1) % testimonials.length)
+    }, 6000)
+    return () => clearInterval(timer)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [current, testimonials.length])
 
   const t = testimonials[current]
 
